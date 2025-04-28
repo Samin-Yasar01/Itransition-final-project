@@ -192,7 +192,7 @@ namespace FormsApp.Features.Templates.Controllers
                 Title = template.Title,
                 Description = template.Description,
                 Topic = template.Topic,
-                xmin = template.xmin,
+               
                 Questions = template.Questions.Select(q => new EditQuestionViewModel
                 {
                     Id = q.Id,
@@ -208,6 +208,7 @@ namespace FormsApp.Features.Templates.Controllers
         }
 
         // Handles template edit form submission
+        // POST: Templates/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, EditTemplateViewModel viewModel)
@@ -221,69 +222,19 @@ namespace FormsApp.Features.Templates.Controllers
                 var existingTemplate = await _templateService.GetTemplateByIdAsync(id);
                 if (existingTemplate == null) return NotFound();
 
+                // Update properties
                 existingTemplate.Title = viewModel.Title;
                 existingTemplate.Description = viewModel.Description;
                 existingTemplate.Topic = viewModel.Topic;
-                existingTemplate.xmin = viewModel.xmin;
 
-                // Get existing question IDs
-                var existingQuestionIds = existingTemplate.Questions.Select(q => q.Id).ToList();
-                var submittedQuestionIds = viewModel.Questions.Select(q => q.Id).ToList();
-
-                // Find questions to remove (existing questions not in submitted list)
-                var questionsToRemove = existingTemplate.Questions
-                    .Where(q => !submittedQuestionIds.Contains(q.Id))
-                    .ToList();
-
-                // Remove questions that are no longer present
-                foreach (var question in questionsToRemove)
-                {
-                    existingTemplate.Questions.Remove(question);
-                }
-
-                // Update existing questions and add new ones
-                foreach (var vmQuestion in viewModel.Questions)
-                {
-                    var existingQuestion = existingTemplate.Questions.FirstOrDefault(q => q.Id == vmQuestion.Id);
-                    if (existingQuestion != null)
-                    {
-                        // Update existing question
-                        existingQuestion.Title = vmQuestion.Title;
-                        existingQuestion.Description = vmQuestion.Description;
-                        existingQuestion.Type = vmQuestion.Type;
-                        existingQuestion.AllowEmpty = vmQuestion.AllowEmpty;
-                        existingQuestion.Order = vmQuestion.Order;
-                    }
-                    else
-                    {
-                        // Add new question
-                        existingTemplate.Questions.Add(new Question
-                        {
-                            Title = vmQuestion.Title,
-                            Description = vmQuestion.Description,
-                            Type = vmQuestion.Type,
-                            AllowEmpty = vmQuestion.AllowEmpty,
-                            Order = vmQuestion.Order,
-                            TemplateId = existingTemplate.Id
-                        });
-                    }
-                }
-
+                // Update questions
                 await _templateService.UpdateTemplateAsync(existingTemplate);
-
                 return RedirectToAction(nameof(Index));
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!await _templateService.TemplateExistsAsync(viewModel.Id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    ModelState.AddModelError("", "The template was modified by another user. Please try again.");
-                    return View(viewModel);
-                }
+                ModelState.AddModelError("", "The template was modified by another user. Please refresh and try again.");
+                return View(viewModel);
             }
         }
 

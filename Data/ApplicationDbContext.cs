@@ -28,9 +28,12 @@ namespace FormsApp.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure Template-User relationship
             modelBuilder.Entity<Template>(entity =>
             {
+                entity.Property<uint>("xmin")
+                      .HasColumnType("xid")
+                      .IsRowVersion();
+
                 entity.HasOne(t => t.User)
                       .WithMany(u => u.Templates)
                       .HasForeignKey(t => t.UserId)

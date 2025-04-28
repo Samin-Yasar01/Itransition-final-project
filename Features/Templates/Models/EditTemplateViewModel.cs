@@ -21,7 +21,7 @@ namespace FormsApp.Features.Templates.Models
         [Required]
         public string Topic { get; set; }
 
-        public uint xmin { get; set; }
+      
 
         public List<EditQuestionViewModel> Questions { get; set; }
     }

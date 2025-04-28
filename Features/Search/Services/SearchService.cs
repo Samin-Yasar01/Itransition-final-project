@@ -26,8 +26,8 @@ namespace FormsApp.Features.Search.Services
         public async Task<IEnumerable<Template>> SearchTemplatesAsync(string query)
         {
             try
-        {
-            if (string.IsNullOrWhiteSpace(query))
+            {
+                if (string.IsNullOrWhiteSpace(query))
                 {
                     return await GetPublicTemplatesAsync();
                 }

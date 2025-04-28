@@ -1,6 +1,10 @@
-using FormsApp.Data;
-using FormsApp.Features.Templates.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using FormsApp.Features.Templates.Models;
+using FormsApp.Data;
 
 namespace FormsApp.Features.Templates.Repositories
 {
@@ -40,20 +44,29 @@ namespace FormsApp.Features.Templates.Repositories
         {
             try
             {
-                _context.Entry(template).State = EntityState.Modified;
-                _context.Entry(template).Property(t => t.xmin).OriginalValue = template.xmin;
+                var entry = _context.Entry(template);
+                entry.State = EntityState.Modified;
+
+                // Handle concurrency using xmin shadow property
+                if (entry.Property("xmin").CurrentValue == null)
+                {
+                    await _context.Entry(template).GetDatabaseValuesAsync();
+                }
+
                 await _context.SaveChangesAsync();
                 return template;
             }
             catch (DbUpdateConcurrencyException ex)
             {
-                var databaseValues = await _context.Entry(template).GetDatabaseValuesAsync();
+                var entry = ex.Entries.Single();
+                var databaseValues = await entry.GetDatabaseValuesAsync();
+
                 if (databaseValues == null)
                 {
                     return null;
                 }
 
-                template.xmin = ((Template)databaseValues.ToObject()).xmin;
+                entry.OriginalValues.SetValues(databaseValues);
                 throw;
             }
         }
@@ -63,9 +76,9 @@ namespace FormsApp.Features.Templates.Repositories
             var template = await _context.Templates
                 .Include(t => t.Questions)
                 .Include(t => t.Forms)
-                    .ThenInclude(f => f.Answers)
+                .ThenInclude(f => f.Answers)
                 .Include(t => t.Forms)
-                    .ThenInclude(f => f.QuestionSnapshots)
+                .ThenInclude(f => f.QuestionSnapshots)
                 .Include(t => t.Comments)
                 .Include(t => t.Likes)
                 .Include(t => t.AllowedUsers)
@@ -74,7 +87,6 @@ namespace FormsApp.Features.Templates.Repositories
 
             if (template != null)
             {
-                // Delete all related entities
                 _context.FormAnswers.RemoveRange(template.Forms.SelectMany(f => f.Answers));
                 _context.QuestionSnapshots.RemoveRange(template.Forms.SelectMany(f => f.QuestionSnapshots));
                 _context.Forms.RemoveRange(template.Forms);

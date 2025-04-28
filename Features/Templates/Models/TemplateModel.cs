@@ -26,9 +26,7 @@ namespace FormsApp.Features.Templates.Models
         [Required]
         public string UserId { get; set; }
 
-        [ConcurrencyCheck]
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        public uint xmin { get; set; }
+        
 
         [ForeignKey("UserId")]
         public virtual ApplicationUser User { get; set; }

@@ -11,22 +11,5 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__DefaultConnection=Host=dpg-d07osnqli9vc73fgq950-a;Database=formsappdb1_ip11;Username=formsappdb1_ip11_user;Password=5qM5AjyabImqnpuydD6xCd6wyM04Maoz
-    depends_on:
-      - db
+      - ConnectionStrings__DefaultConnection=Host=dpg-d07rmc24d50c73ff3f00-a;Port=5432;Database=formsappdb2;Username=formsappdb2_user;Password=x8SkaRKGRFDtUNuLzH5crv4d1TyfAIJa;SSL Mode=Require;Trust Server Certificate=true
     restart: always
-
-  db:
-    image: postgres:16
-    environment:
-      - POSTGRES_USER=formsappdb1_ip11_user
-      - POSTGRES_PASSWORD=5qM5AjyabImqnpuydD6xCd6wyM04Maoz
-      - POSTGRES_DB=formsappdb1_ip11
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    restart: always
-
-volumes:
-  postgres_data: 

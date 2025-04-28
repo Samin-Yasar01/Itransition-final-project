@@ -2167,7 +2167,6 @@ E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.MvcAppl
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.MvcApplicationPartsAssemblyInfo.cache
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.RazorAssemblyInfo.cache
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.RazorAssemblyInfo.cs
-E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\es\FormsApp.resources.cs
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\es\FormsApp.resources.dll
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\scopedcss\bundle\FormsApp.styles.css
@@ -2187,3 +2186,5 @@ E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\refint\FormsApp.
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.pdb
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.genruntimeconfig.cache
 E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\ref\FormsApp.dll
+E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\FormsApp.sourcelink.json
+E:\Itransition more 2\Render deploy 1\FormsApp\obj\Debug\net8.0\es\FormsApp.resources.cs
