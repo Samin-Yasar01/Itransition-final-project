@@ -1,0 +1,273 @@
+﻿@model FormsApp.Features.Templates.Models.CreateTemplateViewModel
+
+@{
+    ViewData["Title"] = "Create Template";
+}
+
+<div class="container">
+    <h2>Create New Template</h2>
+    <hr />
+
+    <form asp-action="Create" id="templateForm">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="Topic" class="form-label"></label>
+            <select asp-for="Topic" class="form-select">
+                <option value="Education">Education</option>
+                <option value="Quiz">Quiz</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="Visibility" class="form-label"></label>
+            <select asp-for="Visibility" class="form-select" id="visibilitySelect">
+                <option value="public">Public - Anyone can view and use this template</option>
+                <option value="private">Private - Only specified users can access this template</option>
+            </select>
+            <span asp-validation-for="Visibility" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-4" id="allowedUsersSection" style="display: none;">
+            <label asp-for="AllowedUserEmails" class="form-label"></label>
+            <input asp-for="AllowedUserEmails" class="form-control" placeholder="Enter email addresses separated by commas" />
+            <span asp-validation-for="AllowedUserEmails" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="Tags" class="form-label"></label>
+            <input asp-for="Tags" class="form-control" placeholder="Enter tags separated by commas (e.g., education, math, quiz)" />
+            <span asp-validation-for="Tags" class="text-danger"></span>
+            <small class="form-text text-muted">Add relevant tags to help others find your template</small>
+        </div>
+
+        <h4>Questions</h4>
+        <div id="questions-container" class="mb-3">
+            @if (Model.Questions == null || !Model.Questions.Any())
+            {
+                <div class="question-entry card mb-3 p-3">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label class="form-label">Type</label>
+                            <select name="Questions[0].Type" class="form-select">
+                                <option value="Text">Single-line Text</option>
+                                <option value="Multiline">Multi-line Text</option>
+                                <option value="Number">Number</option>
+                                <option value="Checkbox">Checkbox</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="form-label">Question Title</label>
+                            <input name="Questions[0].Title" class="form-control" />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea name="Questions[0].Description" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="hidden" name="Questions[0].AllowEmpty" value="false" />
+                                <input name="Questions[0].AllowEmpty" class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Allow Empty</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="button" class="btn btn-danger btn-sm remove-question">
+                                <i class="bi bi-trash"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                @for (var i = 0; i < Model.Questions.Count; i++)
+                {
+                    <div class="question-entry card mb-3 p-3">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Type</label>
+                                <select asp-for="Questions[i].Type" class="form-select">
+                                    <option value="Text">Single-line Text</option>
+                                    <option value="Multiline">Multi-line Text</option>
+                                    <option value="Number">Number</option>
+                                    <option value="Checkbox">Checkbox</option>
+                                </select>
+                                <span asp-validation-for="Questions[i].Type" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label">Question Title</label>
+                                <input asp-for="Questions[i].Title" class="form-control" />
+                                <span asp-validation-for="Questions[i].Title" class="text-danger"></span>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea asp-for="Questions[i].Description" class="form-control" rows="2"></textarea>
+                                <span asp-validation-for="Questions[i].Description" class="text-danger"></span>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input asp-for="Questions[i].AllowEmpty" class="form-check-input" />
+                                    <label asp-for="Questions[i].AllowEmpty" class="form-check-label">Allow Empty</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="button" class="btn btn-danger btn-sm remove-question">
+                                    <i class="bi bi-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="mb-4">
+            <button type="button" id="add-question" class="btn btn-secondary">
+                <i class="bi bi-plus-circle"></i> Add Question
+            </button>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-save"></i> Create Template
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@* Define Scripts section that will be rendered in the layout *@
+@section Scripts {
+        @* Include partial view for validation scripts (jQuery validation) *@
+    <partial name="_ValidationScriptsPartial" />
+
+        @* Start of main script block *@
+    <script>
+        // Wait for DOM to be fully loaded before executing script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get references to key DOM elements
+            const container = document.getElementById('questions-container'); // Container for all questions
+            const form = document.getElementById('templateForm'); // The main form element
+            const visibilitySelect = document.getElementById('visibilitySelect'); // Visibility dropdown for public and private
+            const allowedUsersSection = document.getElementById('allowedUsersSection'); // Allowed users section
+
+            // Add click event listener to "Add Question" button
+            document.getElementById('add-question').addEventListener('click', function() {
+                // Get current number of questions
+                const index = container.querySelectorAll('.question-entry').length;
+
+                // Enforce maximum of 4 questions
+                if (index >= 4) {
+                    alert('Maximum 4 questions allowed');
+                    return; // Exit if limit reached
+                }
+
+                // HTML template for a new question entry
+                const html = `
+                    <div class="question-entry card mb-3 p-3">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Type</label>
+                                <select name="Questions[${index}].Type" class="form-select">
+                                    <option value="Text">Single-line Text</option>
+                                    <option value="Multiline">Multi-line Text</option>
+                                    <option value="Number">Number</option>
+                                    <option value="Checkbox">Checkbox</option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label">Question Title</label>
+                                <input name="Questions[${index}].Title" class="form-control" />
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea name="Questions[${index}].Description" class="form-control" rows="2"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input type="hidden" name="Questions[${index}].AllowEmpty" value="false" />
+                                    <input name="Questions[${index}].AllowEmpty" class="form-check-input" type="checkbox" />
+                                    <label class="form-check-label">Allow Empty</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="button" class="btn btn-danger btn-sm remove-question">
+                                    <i class="bi bi-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+
+                // Insert the new question HTML at the end of the container
+                container.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Event delegation for remove question buttons
+            container.addEventListener('click', function(e) {
+                // Check if click originated from a remove button
+                if (e.target.closest('.remove-question')) {
+                    // Get the parent question entry
+                    const questionEntry = e.target.closest('.question-entry');
+
+                    // Ensure at least one question remains
+                    if (container.querySelectorAll('.question-entry').length > 1) {
+                        questionEntry.remove(); // Remove the question
+                        updateQuestionIndices(); // Update question indices
+                    } else {
+                        alert('At least 1 question is required');
+                    }
+                }
+            });
+
+            // Function to update question indices in form field names
+            function updateQuestionIndices() {
+                // Loop through all question entries
+                container.querySelectorAll('.question-entry').forEach((entry, index) => {
+                    // Update all form elements within the question
+                    entry.querySelectorAll('select, input, textarea').forEach(element => {
+                        // Replace index in name attribute (e.g., Questions[0] -> Questions[1])
+                        element.name = element.name.replace(/\[\d+\]/, `[${index}]`);
+                    });
+                });
+            }
+
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                // Count current questions
+                const questionCount = container.querySelectorAll('.question-entry').length;
+
+                // Prevent submission if no questions exist
+                if (questionCount === 0) {
+                    e.preventDefault();
+                    alert('At least 1 question is required');
+                }
+            });
+
+            // Function to toggle visibility of allowed users section
+            function toggleAllowedUsers() {
+                // Show only when "private" is selected in visibility dropdown
+                allowedUsersSection.style.display = visibilitySelect.value === 'private' ? 'block' : 'none';
+            }
+
+            // Add change event listener to visibility dropdown
+            visibilitySelect.addEventListener('change', toggleAllowedUsers);
+
+            // Initialize the allowed users section visibility
+            toggleAllowedUsers(); // Initial state
+        });
+    </script>
+}

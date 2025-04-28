@@ -1,0 +1,243 @@
+﻿@using Markdig
+@model FormsApp.Features.Templates.Models.Template
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-4">
+                        <div>
+                            <h2 class="card-title mb-1">@Model.Title</h2>
+                            <div class="text-muted">
+                                <small>
+                                    <i class="bi bi-person"></i> @Model.User?.FirstName @Model.User?.LastName
+                                    <span class="mx-2">•</span>
+                                    <i class="bi bi-calendar"></i> @Model.CreatedDate.ToLocalTime().ToString("MMM dd, yyyy HH:mm")
+                                    <span class="mx-2">•</span>
+                                    <i class="bi bi-tag"></i> @Model.Topic
+                                </small>
+                            </div>
+                        </div>
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+                            <div>
+                                @if (Model.UserId == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value || 
+                                     User.IsInRole("Admin"))
+                                {
+                                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-pencil"></i> Edit Template
+                                    </a>
+                                }
+                                <button class="btn btn-primary btn-sm" onclick="fillOutForm('@Model.Id')">
+                                    <i class="bi bi-file-earmark-text"></i> Fill Out Form
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="toggleLike('@Model.Id')">
+                                    <i class="bi bi-heart"></i> <span class="like-count">@Model.Likes.Count</span>
+                                </button>
+                            </div>
+                        }
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <div class="card-text mb-4">
+                            @Html.Raw(Markdown.ToHtml(Model.Description))
+                        </div>
+                    }
+
+                    @if (Model.TemplateTags.Any())
+                    {
+                        <div class="mb-4">
+                            @foreach (var tag in Model.TemplateTags)
+                            {
+                                <span class="badge bg-secondary me-1">@tag.Tag.Name</span>
+                            }
+                        </div>
+                    }
+
+                    <h4 class="mb-3">Questions</h4>
+                    <div class="list-group">
+                        @foreach (var question in Model.Questions.OrderBy(q => q.Order))
+                        {
+                            <div class="list-group-item">
+                                <h5 class="mb-1">@question.Title</h5>
+                                @if (!string.IsNullOrEmpty(question.Description))
+                                {
+                                    <p class="text-muted mb-1">@question.Description</p>
+                                }
+                                <small class="text-muted">
+                                    <i class="bi bi-input-cursor-text"></i>
+                                    @switch (question.Type)
+                                    {
+                                        case "Text":
+                                            <span>Single-line Text</span>
+                                            break;
+                                        case "Multiline":
+                                            <span>Multi-line Text</span>
+                                            break;
+                                        case "Number":
+                                            <span>Number</span>
+                                            break;
+                                        case "Checkbox":
+                                            <span>Checkbox</span>
+                                            break;
+                                    }
+                                </small>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            @if (Model.Comments.Any())
+            {
+                <div class="mt-4">
+                    <h4>Comments <span class="badge bg-secondary">@Model.Comments.Count</span></h4>
+                    <div class="list-group" id="comments-list">
+                        @foreach (var comment in Model.Comments.OrderByDescending(c => c.CreatedAt))
+                        {
+                            <div class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">
+                                        <i class="bi bi-person"></i> @comment.User?.FirstName @comment.User?.LastName
+                                    </small>
+                                    <small class="text-muted">
+                                        <i class="bi bi-clock"></i> @comment.CreatedAt.ToLocalTime().ToString("MMM dd, yyyy HH:mm")
+                                    </small>
+                                </div>
+                                <p class="mb-0 mt-2">@comment.Content</p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+
+            @if (User.Identity?.IsAuthenticated ?? false)
+            {
+                <div class="mt-4">
+                    <form id="comment-form" asp-controller="Social" asp-action="AddComment" method="post">
+                        <input type="hidden" name="templateId" value="@Model.Id" />
+                        <div class="form-group">
+                            <label for="content">Add a Comment</label>
+                            <textarea name="content" id="content" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-2">
+                            <i class="bi bi-chat"></i> Post Comment
+                        </button>
+                    </form>
+                </div>
+            }
+            else
+            {
+                <div class="mt-4">
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle"></i> Please <a asp-controller="Account" asp-action="Login">login</a> to leave comments and likes.
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <script>
+        function fillOutForm(templateId) {
+            window.location.href = '@Url.Action("Create", "Forms")' + '?templateId=' + templateId;
+        }
+
+        // Initialize SignalR connection
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/commentsHub")
+            .configureLogging(signalR.LogLevel.Information)
+            .build();
+
+        // Start the connection
+        connection.start().catch(err => console.error(err.toString()));
+
+        function toggleLike(templateId) {
+            $.post(`/Social/ToggleLike?templateId=${templateId}`, function(response) {
+                const likeButton = $('.btn-outline-secondary');
+                const likeCount = likeButton.find('.like-count');
+                
+                likeCount.text(response.likeCount);
+                if (response.hasLiked) {
+                    likeButton.removeClass('btn-outline-secondary').addClass('btn-primary');
+                } else {
+                    likeButton.removeClass('btn-primary').addClass('btn-outline-secondary');
+                }
+            });
+        }
+
+        // Handle comment form submission
+        $('#comment-form').submit(function(e) {
+            e.preventDefault();
+            const form = $(this);
+            const content = form.find('#content').val().trim();
+
+            if (content) {
+                $.post(form.attr('action'), {
+                    templateId: form.find('input[name="templateId"]').val(),
+                    content: content
+                }, function(comment) {
+                    // Add new comment to the list
+                    const commentsList = $('#comments-list');
+                    const newComment = `
+                        <div class="list-group-item">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="bi bi-person"></i> ${comment.userName}
+                                </small>
+                                <small class="text-muted">
+                                    <i class="bi bi-clock"></i> ${new Date(comment.createdAt).toLocaleString()}
+                                </small>
+                            </div>
+                            <p class="mb-0 mt-2">${comment.content}</p>
+                        </div>
+                    `;
+                    commentsList.prepend(newComment);
+                    
+                    // Update comment count
+                    const commentCount = parseInt($('.badge').text()) + 1;
+                    $('.badge').text(commentCount);
+                    
+                    // Clear the form
+                    form.find('#content').val('');
+                    
+                    // Notify other users via SignalR
+                    connection.invoke("SendComment", comment.userName, comment.content, '@Model.Id');
+                });
+            }
+        });
+
+        // Receive new comments via SignalR
+        connection.on("ReceiveComment", (user, comment, templateId) => {
+            if (templateId === '@Model.Id') {
+                const commentsList = $('#comments-list');
+                const newComment = `
+                    <div class="list-group-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">
+                                <i class="bi bi-person"></i> ${user}
+                            </small>
+                            <small class="text-muted">
+                                <i class="bi bi-clock"></i> ${new Date().toLocaleString()}
+                            </small>
+                        </div>
+                        <p class="mb-0 mt-2">${comment}</p>
+                    </div>
+                `;
+                commentsList.prepend(newComment);
+                
+                // Update comment count
+                const commentCount = parseInt($('.badge').text()) + 1;
+                $('.badge').text(commentCount);
+            }
+        });
+    </script>
+}

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FormsApp.Features.Templates.Models.Template>
+
+@{
+    ViewData["Title"] = "Templates";
+}
+
+<div class="container">
+    <h2>Templates</h2>
+    <a asp-action="Create" class="btn btn-primary mb-3">Create New</a>
+
+    <div class="list-group">
+        @foreach (var template in Model)
+        {
+            <div class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                    <h5>@template.Title</h5>
+                    @if (ViewBag.IsAdmin == true || template.UserId != ViewBag.CurrentUserId)
+                    {
+                        <small class="text-muted">Created by: @template.User?.Email</small>
+                    }
+                    <small class="text-muted">Last updated: @template.UpdatedDate.ToLocalTime().ToString("g")</small>
+                </div>
+                <div>
+                    <a asp-action="Responses" asp-route-id="@template.Id"
+                       class="btn btn-sm btn-info mr-2">View Responses</a>
+                    @if (template.UserId == ViewBag.CurrentUserId || ViewBag.IsAdmin == true)
+                    {
+                        <a asp-action="Edit" asp-route-id="@template.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+                        <form asp-action="Delete" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@template.Id" />
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                        </form>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,174 @@
+@model FormsApp.Features.Templates.Models.EditTemplateViewModel
+@{
+    ViewData["Title"] = "Edit Template";
+    var questions = Model.Questions.OrderBy(q => q.Order).ToList();
+}
+
+<div class="container">
+    <h2>Edit Template</h2>
+    <hr />
+
+    <form asp-action="Edit" method="post" id="templateForm">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="xmin" />
+
+        <div class="form-group mb-3">
+            <label asp-for="Title" class="form-label"></label>
+            <input asp-for="Title" class="form-control" required />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Description" class="form-label"></label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-4">
+            <label asp-for="Topic" class="form-label"></label>
+            <select asp-for="Topic" class="form-select" required>
+                <option value="Education">Education</option>
+                <option value="Quiz">Quiz</option>
+                <option value="Other">Other</option>
+            </select>
+            <span asp-validation-for="Topic" class="text-danger"></span>
+        </div>
+
+        <h4>Questions</h4>
+        <div id="questions-container" class="mb-3">
+            @for (var i = 0; i < questions.Count; i++)
+            {
+                <div class="question-entry card mb-3 p-3">
+                    <div class="row g-3">
+                        <input type="hidden" name="Questions[@i].Id" value="@questions[i].Id" />
+                        <input type="hidden" name="Questions[@i].Order" value="@i" />
+                        <div class="col-md-4">
+                            <label class="form-label">Type</label>
+                            <select name="Questions[@i].Type" class="form-select" required>
+                                @{
+                                    var types = new[] {
+                            new { Value = "Text", Text = "Single-line Text" },
+                            new { Value = "Multiline", Text = "Multi-line Text" },
+                            new { Value = "Number", Text = "Number" },
+                            new { Value = "Checkbox", Text = "Checkbox" }
+                            };
+                                    foreach (var type in types)
+                                    {
+                                        <option value="@type.Value" selected="@(questions[i].Type == type.Value)">@type.Text</option>
+                                    }
+                                }
+                            </select>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Questions[@i].Type" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="form-label">Question Title</label>
+                            <input name="Questions[@i].Title" class="form-control" value="@questions[i].Title" required />
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Questions[@i].Title" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Description</label>
+                            <textarea name="Questions[@i].Description" class="form-control" rows="2">@questions[i].Description</textarea>
+                            <span class="text-danger field-validation-valid" data-valmsg-for="Questions[@i].Description" data-valmsg-replace="true"></span>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="hidden" name="Questions[@i].AllowEmpty" value="false" />
+                                <input name="Questions[@i].AllowEmpty" type="checkbox" class="form-check-input" value="true" @(questions[i].AllowEmpty ? "checked" : "") />
+                                <label class="form-check-label">Allow Empty</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="button" class="btn btn-danger btn-sm remove-question">
+                                <i class="bi bi-trash"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="mb-4">
+            <button type="button" id="add-question" class="btn btn-secondary">
+                <i class="bi bi-plus-circle"></i> Add Question
+            </button>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-save"></i> Save Changes
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('questions-container');
+            const form = document.getElementById('templateForm');
+
+            document.getElementById('add-question').addEventListener('click', function() {
+                const index = container.querySelectorAll('.question-entry').length;
+                if (index >= 4) {
+                    alert('Maximum 4 questions allowed');
+                    return;
+                }
+
+                const html = `
+                    <div class="question-entry card mb-3 p-3">
+                        <div class="row g-3">
+                            <input type="hidden" name="Questions[${index}].Id" value="" />
+                            <input type="hidden" name="Questions[${index}].Order" value="${index}" />
+                            <div class="col-md-4">
+                                <label class="form-label">Type</label>
+                                <select name="Questions[${index}].Type" class="form-select" required>
+                                    <option value="Text">Single-line Text</option>
+                                    <option value="Multiline">Multi-line Text</option>
+                                    <option value="Number">Number</option>
+                                    <option value="Checkbox">Checkbox</option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label">Question Title</label>
+                                <input name="Questions[${index}].Title" class="form-control" required />
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Description</label>
+                                <textarea name="Questions[${index}].Description" class="form-control" rows="2"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input type="hidden" name="Questions[${index}].AllowEmpty" value="false" />
+                                    <input name="Questions[${index}].AllowEmpty" class="form-check-input" type="checkbox" value="true" />
+                                    <label class="form-check-label">Allow Empty</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-end">
+                                <button type="button" class="btn btn-danger btn-sm remove-question">
+                                    <i class="bi bi-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                container.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Remove question handler
+            container.addEventListener('click', function(e) {
+                if (e.target.closest('.remove-question')) {
+                    e.target.closest('.question-entry').remove();
+                    // Re-index remaining questions
+                    Array.from(container.querySelectorAll('.question-entry')).forEach((entry, index) => {
+                        entry.querySelectorAll('input, select, textarea').forEach(element => {
+                            element.name = element.name.replace(/\[\d+\]/g, `[${index}]`);
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+}

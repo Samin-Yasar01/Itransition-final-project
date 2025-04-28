@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Itransition more 2\\7\\FormsApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\migrations\\20250427162902_add-migration initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:migrations\\20250427162902_add-migration initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\features\\templates\\controllers\\templatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\controllers\\templatescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\features\\templates\\models\\templatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\models\\templatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427151458_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250427151458_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427150343_verynew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250427150343_verynew.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\views\\forms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\forms\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\search\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\views\\templates\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\templates\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\views\\templates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\templates\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\features\\templates\\models\\createtemplateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\models\\createtemplateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition more 2\\7\\formsapp\\features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250427162902_add-migration initial.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427162902_add-migration initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250427162902_add-migration initial.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427162902_add-migration initial.cs",
+              "RelativeToolTip": "Migrations\\20250427162902_add-migration initial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T16:29:02.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250427151458_initial.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427151458_initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250427151458_initial.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427151458_initial.cs",
+              "RelativeToolTip": "Migrations\\20250427151458_initial.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:14:58.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20250427150343_verynew.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427150343_verynew.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250427150343_verynew.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427150343_verynew.cs",
+              "RelativeToolTip": "Migrations\\20250427150343_verynew.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T15:03:43.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-27T14:39:03.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwCsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T09:12:57.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T09:12:03.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Forms\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Forms\\Index.cshtml",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Forms\\Index.cshtml",
+              "RelativeToolTip": "Views\\Forms\\Index.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAIBJwEwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T08:45:19.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Search\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Search\\Index.cshtml",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Search\\Index.cshtml",
+              "RelativeToolTip": "Views\\Search\\Index.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAIBJwDoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T08:39:23.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Templates\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Templates\\Details.cshtml",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Templates\\Details.cshtml",
+              "RelativeToolTip": "Views\\Templates\\Details.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAIBJwIMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-27T06:47:47.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Templates\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Templates\\Create.cshtml",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Views\\Templates\\Create.cshtml",
+              "RelativeToolTip": "Views\\Templates\\Create.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAIBJwLAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-25T04:48:30.203Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TemplatesController.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Controllers\\TemplatesController.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Controllers\\TemplatesController.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Controllers\\TemplatesController.cs",
+              "RelativeToolTip": "Features\\Templates\\Controllers\\TemplatesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:45:35.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TemplateModel.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Models\\TemplateModel.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Models\\TemplateModel.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Models\\TemplateModel.cs",
+              "RelativeToolTip": "Features\\Templates\\Models\\TemplateModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:45:06.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateTemplateViewModel.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Models\\CreateTemplateViewModel.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Models\\CreateTemplateViewModel.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Models\\CreateTemplateViewModel.cs",
+              "RelativeToolTip": "Features\\Templates\\Models\\CreateTemplateViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:45:04.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TemplateService.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Services\\TemplateService.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Services\\TemplateService.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Services\\TemplateService.cs",
+              "RelativeToolTip": "Features\\Templates\\Services\\TemplateService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:45:09.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TemplateRepository.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "RelativeToolTip": "Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwH8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:45:08.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Itransition more 2\\7\\FormsApp\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAmwIAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T14:45:21.009Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

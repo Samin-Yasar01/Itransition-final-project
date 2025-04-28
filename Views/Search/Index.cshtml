@@ -1,0 +1,71 @@
+﻿@model List<FormsApp.Features.Templates.Models.Template>
+
+<div class="container">
+    <h2>Search Templates</h2>
+
+    <form method="post" class="mb-4">
+        <div class="input-group">
+            <input type="text" name="searchQuery" class="form-control"
+                   placeholder="Search by title, description, or tags..." value="@ViewBag.SearchQuery" />
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-search"></i> Search
+            </button>
+        </div>
+    </form>
+
+    @if (Model.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Author</th>
+                        <th>Email</th>
+                        <th>Created</th>
+                        <th>Tags</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var template in Model)
+                    {
+                        <tr>
+                            <td>@template.Title</td>
+                            <td class="text-muted">@(template.Description.Length > 50 ? template.Description.Substring(0, 50) + "..." : template.Description)</td>
+                            <td>@template.User?.FirstName @template.User?.LastName</td>
+                            <td>@template.User?.Email</td>
+                            <td>@template.CreatedDate.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                @if (template.TemplateTags.Any())
+                                {
+                                    @foreach (var tag in template.TemplateTags)
+                                    {
+                                        <span class="badge bg-secondary me-1">@tag.Tag.Name</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="text-muted">None</span>
+                                }
+                            </td>
+                            <td>
+                                <a asp-controller="Templates" asp-action="Details" asp-route-id="@template.Id"
+                                   class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-eye"></i> View
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (!string.IsNullOrEmpty(ViewBag.SearchQuery))
+    {
+        <div class="alert alert-info">
+            <i class="bi bi-info-circle"></i> No templates found matching your search criteria.
+        </div>
+    }
+</div>

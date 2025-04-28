@@ -1,0 +1,56 @@
+﻿@model List<FormsApp.Features.Admin.Models.UserManagementModel>
+
+<div class="container">
+    <h2>User Management</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.FirstName @user.LastName</td>
+                    <td>@user.Email</td>
+                    <td>
+                        @if (user.IsBlocked)
+                        {
+                            <span class="badge bg-danger">Blocked</span>
+                        }
+                        @if (user.IsAdmin)
+                        {
+                            <span class="badge bg-success">Admin</span>
+                        }
+                    </td>
+                    <td>
+                        <form asp-action="ManageUser" method="post">
+                            <input type="hidden" name="userId" value="@user.UserId" />
+
+                            <button type="submit" name="action" value="toggle-admin"
+                                    class="btn btn-sm @(user.IsAdmin ? "btn-warning" : "btn-outline-success")">
+                                @(user.IsAdmin ? "Remove Admin" : "Make Admin")
+                            </button>
+
+                            <button type="submit" name="action" value="toggle-block"
+                                    class="btn btn-sm @(user.IsBlocked ? "btn-success" : "btn-outline-danger")">
+                                @(user.IsBlocked ? "Unblock" : "Block")
+                            </button>
+
+                            <button type="submit" name="action" value="delete"
+                                    class="btn btn-sm btn-outline-danger"
+                                    onclick="return confirm('Are you sure?')">
+                                Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
