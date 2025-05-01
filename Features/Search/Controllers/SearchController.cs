@@ -3,6 +3,7 @@ using FormsApp.Features.Templates.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using FormsApp.Models;
+using System.Linq;
 
 namespace FormsApp.Features.Search.Controllers
 {
@@ -30,7 +31,7 @@ namespace FormsApp.Features.Search.Controllers
             ViewBag.SearchQuery = searchQuery;
             var userId = _userManager.GetUserId(User);
             var results = await _searchService.SearchTemplatesAsync(searchQuery, userId);
-            return View(results);
+            return View(results.ToList());
         }
     }
 }

@@ -16,7 +16,6 @@ namespace FormsApp.Features.Templates.Models
 
         [Required]
         [MinLength(1, ErrorMessage = "At least 1 question is required")]
-        [MaxLength(4, ErrorMessage = "Maximum 4 questions allowed")]
         public List<QuestionViewModel> Questions { get; set; } = new List<QuestionViewModel>();
 
         [Required]

@@ -113,11 +113,6 @@
 
             document.getElementById('add-question').addEventListener('click', function() {
                 const index = container.querySelectorAll('.question-entry').length;
-                if (index >= 4) {
-                    alert('Maximum 4 questions allowed');
-                    return;
-                }
-
                 const html = `
                     <div class="question-entry card mb-3 p-3">
                         <div class="row g-3">

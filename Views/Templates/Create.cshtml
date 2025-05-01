@@ -169,13 +169,6 @@
             document.getElementById('add-question').addEventListener('click', function() {
                 // Get current number of questions
                 const index = container.querySelectorAll('.question-entry').length;
-
-                // Enforce maximum of 4 questions
-                if (index >= 4) {
-                    alert('Maximum 4 questions allowed');
-                    return; // Exit if limit reached
-                }
-
                 // HTML template for a new question entry
                 const html = `
                     <div class="question-entry card mb-3 p-3">

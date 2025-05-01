@@ -2431,7 +2431,6 @@ E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\FormsApp.MvcApplic
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\FormsApp.RazorAssemblyInfo.cache
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\FormsApp.RazorAssemblyInfo.cs
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\FormsApp.sourcelink.json
-E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\es\FormsApp.resources.cs
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\es\FormsApp.resources.dll
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\staticwebassets.build.json
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\staticwebassets.development.json

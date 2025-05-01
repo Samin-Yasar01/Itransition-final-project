@@ -17,91 +17,91 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FormsApp
 build_property.RootNamespace = FormsApp
-build_property.ProjectDir = E:\For Itransition\Itransition-final-project\
+build_property.ProjectDir = e:\For Itransition\Itransition-final-project\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\For Itransition\Itransition-final-project
+build_property.MSBuildProjectDirectory = e:\For Itransition\Itransition-final-project
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/For Itransition/Itransition-final-project/Views/Account/Login.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Account/Register.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Admin/Index.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Forms/Edit.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Forms/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Forms/Index.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Forms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Forms/View.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Forms/View.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Home/Index.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Home/Privacy.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Search/Index.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Search/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Shared/Error.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Shared/_LoginPartial.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Shared/_ValidationScriptsPartial.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Templates/Create.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Templates/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtcGxhdGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Templates/Details.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Templates/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtcGxhdGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Templates/Edit.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Templates/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtcGxhdGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Templates/Index.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Templates/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtcGxhdGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Templates/Responses.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Templates/Responses.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtcGxhdGVzXFJlc3BvbnNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/_ViewImports.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/_ViewStart.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/For Itransition/Itransition-final-project/Views/Shared/_Layout.cshtml]
+[e:/For Itransition/Itransition-final-project/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-88tng7wfa8
