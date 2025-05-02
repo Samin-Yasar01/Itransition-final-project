@@ -2448,3 +2448,7 @@ E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\refint\FormsApp.dl
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\FormsApp.pdb
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\FormsApp.genruntimeconfig.cache
 E:\For Itransition\Itransition-final-project\obj\Debug\net8.0\ref\FormsApp.dll
+E:\for itransition\Itransition-final-project\bin\Debug\net8.0\FormsApp.staticwebassets.endpoints.json
+E:\for itransition\Itransition-final-project\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\for itransition\Itransition-final-project\obj\Debug\net8.0\staticwebassets\msbuild.FormsApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+E:\for itransition\Itransition-final-project\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

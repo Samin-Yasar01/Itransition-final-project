@@ -84,7 +84,7 @@ namespace FormsApp.Features.Forms.Controllers
                 {
                     var answerValue = Request.Form[$"Answers[{question.Order}].Value"].ToString();
                     
-                    // For checkbox, we need to handle the hidden input
+                    // For checkbox, handle the hidden input
                     if (question.Type == "Checkbox")
                     {
                         var checkboxValue = Request.Form[$"Answers[{question.Order}].Value"].ToString();

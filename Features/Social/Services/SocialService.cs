@@ -114,7 +114,7 @@ namespace FormsApp.Features.Social.Services
             await _context.SaveChangesAsync();
 
             var likeCount = await _context.Likes.CountAsync(l => l.AnswerId == answerId);
-            var hasLiked = existingLike == null; // If we removed a like, hasLiked is false
+            var hasLiked = existingLike == null; // If a removed a like, hasLiked is false
 
             return (likeCount, hasLiked);
         }
