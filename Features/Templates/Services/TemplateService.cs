@@ -15,6 +15,7 @@ namespace FormsApp.Features.Templates.Services
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
+        // Constructor: Initializes required services and dependencies
         public TemplateService(
             ISocialService socialService,
             ITemplateRepository templateRepository,
@@ -27,12 +28,11 @@ namespace FormsApp.Features.Templates.Services
             _userManager = userManager;
         }
 
+        // Creates a new template and grants admin users full access
         public async Task<Template> CreateTemplateAsync(Template template)
         {
-            // Find all admin users
             var adminUsers = await _userManager.GetUsersInRoleAsync("Admin");
-            
-            // Add admin access for each admin user
+
             foreach (var adminUser in adminUsers)
             {
                 template.AllowedUsers.Add(new TemplateAccess
@@ -45,6 +45,7 @@ namespace FormsApp.Features.Templates.Services
             return await _templateRepository.CreateTemplateAsync(template);
         }
 
+        // Gets a template by ID with all related entities
         public async Task<Template> GetTemplateByIdAsync(Guid id)
         {
             return await _context.Templates
@@ -60,11 +61,13 @@ namespace FormsApp.Features.Templates.Services
                 .FirstOrDefaultAsync(t => t.Id == id);
         }
 
+        // Gets all templates for a specific user
         public async Task<IEnumerable<Template>> GetTemplatesByUserIdAsync(string userId)
         {
             return await _templateRepository.GetTemplatesByUserIdAsync(userId);
         }
 
+        // Gets all templates with complete related data
         public async Task<IEnumerable<Template>> GetAllTemplatesAsync()
         {
             return await _context.Templates
@@ -80,16 +83,19 @@ namespace FormsApp.Features.Templates.Services
                 .ToListAsync();
         }
 
+        // Updates an existing template
         public async Task<Template> UpdateTemplateAsync(Template template)
         {
             return await _templateRepository.UpdateTemplateAsync(template);
         }
 
+        // Deletes a template and all its related data
         public async Task DeleteTemplateAsync(Guid id)
         {
             await _templateRepository.DeleteTemplateAsync(id);
         }
 
+        // Gets template details including social engagement metrics
         public async Task<TemplateDetailsModel?> GetTemplateDetailsAsync(Guid templateId, string userId)
         {
             var template = await GetTemplateByIdAsync(templateId);
@@ -106,6 +112,7 @@ namespace FormsApp.Features.Templates.Services
             };
         }
 
+        // Reorders questions in a template based on provided order
         public async Task ReorderQuestions(Guid templateId, List<Guid> questionOrder)
         {
             var template = await GetTemplateByIdAsync(templateId);
@@ -122,6 +129,7 @@ namespace FormsApp.Features.Templates.Services
             await _templateRepository.UpdateTemplateAsync(template);
         }
 
+        // Checks if a user has access to a specific template
         public async Task<bool> HasAccessToTemplate(Guid templateId, string userId)
         {
             var template = await GetTemplateByIdAsync(templateId);
@@ -130,23 +138,25 @@ namespace FormsApp.Features.Templates.Services
             var user = await _userManager.FindByIdAsync(userId);
             if (user == null) return false;
 
-            // Check if user is admin first
+            // Admins always have access
             if (await _userManager.IsInRoleAsync(user, "Admin")) return true;
 
-            // If template is public, anyone can access it
+            // Public templates are accessible to everyone
             if (template.IsPublic) return true;
 
-            // Check if user is the owner or has explicit access
+            // Check owner or explicit access
             return template.UserId == userId ||
                    template.AllowedUsers.Any(ta => ta.UserId == userId);
         }
 
+        // Checks if a template exists
         public async Task<bool> TemplateExistsAsync(Guid id)
         {
             return await _context.Templates.AnyAsync(t => t.Id == id);
         }
     }
 
+    // Model for returning template details with social metrics
     public class TemplateDetailsModel
     {
         public required Template Template { get; set; }

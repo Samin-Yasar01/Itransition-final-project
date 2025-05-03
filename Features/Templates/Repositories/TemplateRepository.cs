@@ -12,11 +12,13 @@ namespace FormsApp.Features.Templates.Repositories
     {
         private readonly ApplicationDbContext _context;
 
+        // Constructor: Initializes the database context
         public TemplateRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
+        // Creates a new template in the database
         public async Task<Template> CreateTemplateAsync(Template template)
         {
             _context.Templates.Add(template);
@@ -24,6 +26,7 @@ namespace FormsApp.Features.Templates.Repositories
             return template;
         }
 
+        // Retrieves a template by ID, including related questions and allowed users
         public async Task<Template> GetTemplateByIdAsync(Guid id)
         {
             return await _context.Templates
@@ -32,6 +35,7 @@ namespace FormsApp.Features.Templates.Repositories
                 .FirstOrDefaultAsync(t => t.Id == id);
         }
 
+        // Gets all templates belonging to a specific user
         public async Task<IEnumerable<Template>> GetTemplatesByUserIdAsync(string userId)
         {
             return await _context.Templates
@@ -40,6 +44,7 @@ namespace FormsApp.Features.Templates.Repositories
                 .ToListAsync();
         }
 
+        // Updates an existing template with concurrency handling
         public async Task<Template> UpdateTemplateAsync(Template template)
         {
             try
@@ -71,6 +76,7 @@ namespace FormsApp.Features.Templates.Repositories
             }
         }
 
+        // Deletes a template and all its related entities
         public async Task DeleteTemplateAsync(Guid id)
         {
             var template = await _context.Templates
@@ -87,6 +93,7 @@ namespace FormsApp.Features.Templates.Repositories
 
             if (template != null)
             {
+                // Remove all related entities first
                 _context.FormAnswers.RemoveRange(template.Forms.SelectMany(f => f.Answers));
                 _context.QuestionSnapshots.RemoveRange(template.Forms.SelectMany(f => f.QuestionSnapshots));
                 _context.Forms.RemoveRange(template.Forms);

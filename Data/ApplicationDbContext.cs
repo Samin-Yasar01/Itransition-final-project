@@ -28,6 +28,7 @@ namespace FormsApp.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configure template relationships
             modelBuilder.Entity<Template>(entity =>
             {
                 entity.Property<uint>("xmin")
@@ -39,80 +40,7 @@ namespace FormsApp.Data
                       .HasForeignKey(t => t.UserId)
                       .OnDelete(DeleteBehavior.Restrict);
             });
-
-            // Configure Comment relationships
-            modelBuilder.Entity<Comment>(entity =>
-            {
-                entity.HasOne(c => c.Template)
-                      .WithMany(t => t.Comments)
-                      .HasForeignKey(c => c.TemplateId)
-                      .OnDelete(DeleteBehavior.NoAction);
-
-                entity.HasOne(c => c.Answer)
-                      .WithMany(a => a.Comments)
-                      .HasForeignKey(c => c.AnswerId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(c => c.User)
-                      .WithMany()
-                      .HasForeignKey(c => c.UserId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            // Configure other relationships
-            modelBuilder.Entity<Question>(entity =>
-            {
-                entity.HasOne(q => q.Template)
-                      .WithMany(t => t.Questions)
-                      .HasForeignKey(q => q.TemplateId)
-                      .OnDelete(DeleteBehavior.Cascade);
-            });
-
-            modelBuilder.Entity<Form>(entity =>
-            {
-                entity.HasOne(f => f.Template)
-                      .WithMany(t => t.Forms)
-                      .HasForeignKey(f => f.TemplateId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(f => f.User)
-                      .WithMany(u => u.Forms)
-                      .HasForeignKey(f => f.UserId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            modelBuilder.Entity<FormAnswer>(entity =>
-            {
-                entity.HasOne(a => a.Form)
-                      .WithMany(f => f.Answers)
-                      .HasForeignKey(a => a.FormId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(a => a.Question)
-                      .WithMany()
-                      .HasForeignKey(a => a.QuestionId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            modelBuilder.Entity<Like>(entity =>
-            {
-                entity.HasOne(l => l.Template)
-                      .WithMany(t => t.Likes)
-                      .HasForeignKey(l => l.TemplateId)
-                      .OnDelete(DeleteBehavior.NoAction);
-
-                entity.HasOne(l => l.Answer)
-                      .WithMany(a => a.Likes)
-                      .HasForeignKey(l => l.AnswerId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(l => l.User)
-                      .WithMany()
-                      .HasForeignKey(l => l.UserId)
-                      .OnDelete(DeleteBehavior.Restrict)
-                      .IsRequired();
-            });
-
+            
             modelBuilder.Entity<TemplateAccess>(entity =>
             {
                 entity.HasKey(ta => new { ta.TemplateId, ta.UserId });
@@ -139,6 +67,83 @@ namespace FormsApp.Data
                       .OnDelete(DeleteBehavior.Restrict);
             });
 
+            // Configure comment relationships
+            modelBuilder.Entity<Comment>(entity =>
+            {
+                entity.HasOne(c => c.Template)
+                      .WithMany(t => t.Comments)
+                      .HasForeignKey(c => c.TemplateId)
+                      .OnDelete(DeleteBehavior.NoAction);
+
+                entity.HasOne(c => c.Answer)
+                      .WithMany(a => a.Comments)
+                      .HasForeignKey(c => c.AnswerId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(c => c.User)
+                      .WithMany()
+                      .HasForeignKey(c => c.UserId)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // Configure question relationships
+            modelBuilder.Entity<Question>(entity =>
+            {
+                entity.HasOne(q => q.Template)
+                      .WithMany(t => t.Questions)
+                      .HasForeignKey(q => q.TemplateId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Configure form relationships
+            modelBuilder.Entity<Form>(entity =>
+            {
+                entity.HasOne(f => f.Template)
+                      .WithMany(t => t.Forms)
+                      .HasForeignKey(f => f.TemplateId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(f => f.User)
+                      .WithMany(u => u.Forms)
+                      .HasForeignKey(f => f.UserId)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<FormAnswer>(entity =>
+            {
+                entity.HasOne(a => a.Form)
+                      .WithMany(f => f.Answers)
+                      .HasForeignKey(a => a.FormId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(a => a.Question)
+                      .WithMany()
+                      .HasForeignKey(a => a.QuestionId)
+                      .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            // Configure like relationships
+            modelBuilder.Entity<Like>(entity =>
+            {
+                entity.HasOne(l => l.Template)
+                      .WithMany(t => t.Likes)
+                      .HasForeignKey(l => l.TemplateId)
+                      .OnDelete(DeleteBehavior.NoAction);
+
+                entity.HasOne(l => l.Answer)
+                      .WithMany(a => a.Likes)
+                      .HasForeignKey(l => l.AnswerId)
+                      .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(l => l.User)
+                      .WithMany()
+                      .HasForeignKey(l => l.UserId)
+                      .OnDelete(DeleteBehavior.Restrict)
+                      .IsRequired();
+            });
+
+           
+            // Configure question Sanpshot relationships
             modelBuilder.Entity<QuestionSnapshot>(entity =>
             {
                 entity.HasOne(qs => qs.Form)
