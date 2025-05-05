@@ -88,7 +88,8 @@ namespace FormsApp.Features.Forms.Controllers
                     if (question.Type == "Checkbox")
                     {
                         var checkboxValue = Request.Form[$"Answers[{question.Order}].Value"].ToString();
-                        answerValue = checkboxValue == "true" ? "true" : "false";
+                        // If the checkbox was checked, it will have "true" value, otherwise use "false"
+                        answerValue = checkboxValue.Contains("true") ? "true" : "false";
                     }
 
                     // Only add answer if it's not empty or if empty values are allowed
