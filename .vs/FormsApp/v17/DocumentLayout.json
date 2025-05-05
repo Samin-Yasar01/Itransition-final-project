@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\for itransition\\Itransition-final-project\\",
+  "WorkspaceRootPath": "E:\\For Itransition new\\Itransition-final-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition new\\itransition-final-project\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition new\\itransition-final-project\\features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition new\\itransition-final-project\\features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition new\\itransition-final-project\\features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition new\\itransition-final-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\migrations\\20250430221301_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition new\\itransition-final-project\\migrations\\20250430221301_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:migrations\\20250430221301_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,47 +43,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{2bb8137c-bac8-4d04-820a-c52b5d5b82da}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TemplateService.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
+              "DocumentMoniker": "E:\\For Itransition new\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
               "RelativeDocumentMoniker": "Features\\Templates\\Services\\TemplateService.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
+              "ToolTip": "E:\\For Itransition new\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
               "RelativeToolTip": "Features\\Templates\\Services\\TemplateService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAcwB8AAABKAAAAAAAAAA==",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T06:01:51.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TemplateRepository.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "DocumentMoniker": "E:\\For Itransition new\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
               "RelativeDocumentMoniker": "Features\\Templates\\Repositories\\TemplateRepository.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "ToolTip": "E:\\For Itransition new\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
               "RelativeToolTip": "Features\\Templates\\Repositories\\TemplateRepository.cs",
               "ViewState": "AgIAADcAAAAAAAAAAAAQwG4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:55:04.803Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T05:55:04.803Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\For Itransition new\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\For Itransition new\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAQwJUAAAA5AAAAAAAAAA==",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T05:45:35.58Z",
               "EditorCaption": ""
@@ -92,9 +87,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Program.cs",
+              "DocumentMoniker": "E:\\For Itransition new\\Itransition-final-project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Program.cs",
+              "ToolTip": "E:\\For Itransition new\\Itransition-final-project\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -104,9 +99,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "20250430221301_m.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
+              "DocumentMoniker": "E:\\For Itransition new\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
               "RelativeDocumentMoniker": "Migrations\\20250430221301_m.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
+              "ToolTip": "E:\\For Itransition new\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
               "RelativeToolTip": "Migrations\\20250430221301_m.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -116,14 +111,13 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "SearchController.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
+              "DocumentMoniker": "E:\\For Itransition new\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
               "RelativeDocumentMoniker": "Features\\Search\\Controllers\\SearchController.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
+              "ToolTip": "E:\\For Itransition new\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
               "RelativeToolTip": "Features\\Search\\Controllers\\SearchController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T22:02:05.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T22:02:05.777Z"
             },
             {
               "$type": "Document",

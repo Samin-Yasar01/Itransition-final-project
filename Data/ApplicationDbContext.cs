@@ -51,7 +51,7 @@ namespace FormsApp.Data
                 entity.HasOne(ta => ta.User)
                       .WithMany()
                       .HasForeignKey(ta => ta.UserId)
-                      .OnDelete(DeleteBehavior.Restrict);
+                      .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<TemplateTag>(entity =>
