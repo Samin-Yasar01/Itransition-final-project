@@ -56,9 +56,13 @@ namespace FormsApp.Features.Admin.Services
             var isAdmin = await _userManager.IsInRoleAsync(user, "Admin");
             if (isAdmin)
             {
-                await _userManager.RemoveFromRoleAsync(user, "Admin");
-                if (!await _userManager.Users.AnyAsync(u => u.Id != userId && _userManager.IsInRoleAsync(u, "Admin").Result))
-                    await _userManager.AddToRoleAsync(user, "Admin");
+                // Get all users with admin role
+                var adminUsers = await _userManager.GetUsersInRoleAsync("Admin");
+                // Check if there are other admin users besides the current one
+                if (adminUsers.Count(u => u.Id != userId) > 0)
+                {
+                    await _userManager.RemoveFromRoleAsync(user, "Admin");
+                }
             }
             else
             {
