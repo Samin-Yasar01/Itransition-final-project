@@ -35,7 +35,7 @@ namespace FormsApp.Features.Admin.Services
         {
             try
             {
-                // First get an access token
+               
                 var authResponse = await GetSalesforceAuthToken();
                 if (!authResponse.IsSuccessStatusCode)
                 {
@@ -51,7 +51,7 @@ namespace FormsApp.Features.Admin.Services
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                // Create Account
+                
                 var accountData = new
                 {
                     Name = model.CompanyName,
@@ -67,7 +67,7 @@ namespace FormsApp.Features.Admin.Services
                 if (!accountResponse.IsSuccessStatusCode)
                 {
                     var error = await accountResponse.Content.ReadAsStringAsync();
-                    // You might want to log this error
+                    
                     return false;
                 }
 
@@ -75,7 +75,7 @@ namespace FormsApp.Features.Admin.Services
                 var accountJson = JsonDocument.Parse(accountResult);
                 var accountId = accountJson.RootElement.GetProperty("id").GetString();
 
-                // Create Contact
+                
                 var contactData = new
                 {
                     FirstName = user.FirstName,
@@ -93,7 +93,7 @@ namespace FormsApp.Features.Admin.Services
                 if (!contactResponse.IsSuccessStatusCode)
                 {
                     var error = await contactResponse.Content.ReadAsStringAsync();
-                    // You might want to log this error
+                   
                     return false;
                 }
 
@@ -101,7 +101,7 @@ namespace FormsApp.Features.Admin.Services
             }
             catch (Exception ex)
             {
-                // You might want to log this exception
+                
                 return false;
             }
         }

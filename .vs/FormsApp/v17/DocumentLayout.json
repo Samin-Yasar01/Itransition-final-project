@@ -83,8 +83,7 @@
               "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T02:05:10.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T02:05:10.433Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "Features\\Admin\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwGUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T00:31:53.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T00:31:53.887Z"
             },
             {
               "$type": "Document",
@@ -107,7 +105,7 @@
               "RelativeDocumentMoniker": "Features\\Admin\\Services\\SalesforceService.cs",
               "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Services\\SalesforceService.cs",
               "RelativeToolTip": "Features\\Admin\\Services\\SalesforceService.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAQwFAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T00:30:49.07Z",
               "EditorCaption": ""
@@ -122,8 +120,7 @@
               "RelativeToolTip": "Features\\Admin\\Models\\SalesforceIntegrationModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T00:29:57.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T00:29:57.291Z"
             },
             {
               "$type": "Document",
@@ -159,8 +156,7 @@
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAHEAAAAAAAAAAAAAAIcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:45:35.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T05:45:35.58Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAE4AAAAAAAAAAAAAAG0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T08:26:38.286Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T08:26:38.286Z"
             },
             {
               "$type": "Document",
@@ -185,8 +180,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-13T00:38:35.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T00:38:35.852Z"
             },
             {
               "$type": "Document",
@@ -198,8 +192,7 @@
               "RelativeToolTip": "Views\\Admin\\SalesforceIntegration.cshtml",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwD4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-13T00:38:09.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-13T00:38:09.549Z"
             },
             {
               "$type": "Document",
