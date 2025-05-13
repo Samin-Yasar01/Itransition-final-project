@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using FormsApp.Models;
+using FormsApp.Features.Admin.Models;
+using System.Security.Claims;
 
 namespace FormsApp.Features.Admin.Controllers
 {
@@ -11,11 +13,13 @@ namespace FormsApp.Features.Admin.Controllers
     {
         private readonly IAdminService _adminService;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ISalesforceService _salesforceService;
 
-        public AdminController(IAdminService adminService, UserManager<ApplicationUser> userManager)
+        public AdminController(IAdminService adminService, UserManager<ApplicationUser> userManager, ISalesforceService salesforceService)
         {
             _adminService = adminService;
             _userManager = userManager;
+            _salesforceService = salesforceService;
         }
 
         public async Task<IActionResult> Index()
@@ -65,6 +69,49 @@ namespace FormsApp.Features.Admin.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+        [Authorize]
+        public async Task<IActionResult> SalesforceIntegration()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(new SalesforceIntegrationModel());
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SalesforceIntegration(SalesforceIntegrationModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var success = await _salesforceService.CreateSalesforceAccount(user, model);
+
+            if (success)
+            {
+                TempData["SuccessMessage"] = "Your information has been successfully sent to Salesforce!";
+                return RedirectToAction("Index", "Home");
+            }
+
+            ModelState.AddModelError("", "There was an error connecting to Salesforce. Please try again.");
+            return View(model);
         }
     }
 }

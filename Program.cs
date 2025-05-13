@@ -17,6 +17,8 @@ using System.Globalization;
 //** Builder Setup 
 var builder = WebApplication.CreateBuilder(args);
 
+//http client factory for Salesforce
+builder.Services.AddHttpClient();
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -48,6 +50,7 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<ISearchService, SearchService>();
 builder.Services.AddScoped<ISocialService, SocialService>();
 builder.Services.AddSignalR();
+builder.Services.AddScoped<ISalesforceService, SalesforceService>();
 
 //** App Build 
 var app = builder.Build();

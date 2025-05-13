@@ -1,29 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\for itransition\\Itransition-final-project\\",
+  "WorkspaceRootPath": "E:\\Itransition integration\\Itransition-final-project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\features\\admin\\services\\salesforceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\admin\\services\\salesforceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\features\\admin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\admin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\for itransition\\itransition-final-project\\migrations\\20250430221301_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\features\\admin\\models\\salesforceintegrationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\admin\\models\\salesforceintegrationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\views\\admin\\salesforceintegration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:views\\admin\\salesforceintegration.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\services\\templateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\templates\\repositories\\templaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:features\\search\\controllers\\searchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|e:\\itransition integration\\itransition-final-project\\migrations\\20250430221301_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0FEA92C9-A08C-49AA-81BF-A327098FAD8C}|FormsApp.csproj|solutionrelative:migrations\\20250430221301_m.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,70 +67,147 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{2bb8137c-bac8-4d04-820a-c52b5d5b82da}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TemplateService.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
-              "RelativeDocumentMoniker": "Features\\Templates\\Services\\TemplateService.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
-              "RelativeToolTip": "Features\\Templates\\Services\\TemplateService.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAcwB8AAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T06:01:51.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TemplateRepository.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
-              "RelativeDocumentMoniker": "Features\\Templates\\Repositories\\TemplateRepository.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
-              "RelativeToolTip": "Features\\Templates\\Repositories\\TemplateRepository.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwG4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:55:04.803Z",
+              "DocumentIndex": 6,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T02:05:10.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Features\\Admin\\Controllers\\AdminController.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Features\\Admin\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwGUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T00:31:53.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalesforceService.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Services\\SalesforceService.cs",
+              "RelativeDocumentMoniker": "Features\\Admin\\Services\\SalesforceService.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Services\\SalesforceService.cs",
+              "RelativeToolTip": "Features\\Admin\\Services\\SalesforceService.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAQwHsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T00:30:49.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SalesforceIntegrationModel.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Models\\SalesforceIntegrationModel.cs",
+              "RelativeDocumentMoniker": "Features\\Admin\\Models\\SalesforceIntegrationModel.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Admin\\Models\\SalesforceIntegrationModel.cs",
+              "RelativeToolTip": "Features\\Admin\\Models\\SalesforceIntegrationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T00:29:57.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TemplateService.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Services\\TemplateService.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Templates\\Services\\TemplateService.cs",
+              "RelativeToolTip": "Features\\Templates\\Services\\TemplateService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T06:01:51.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TemplateRepository.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "RelativeDocumentMoniker": "Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "RelativeToolTip": "Features\\Templates\\Repositories\\TemplateRepository.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAQwG4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T05:55:04.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAQwJUAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAIcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T05:45:35.58Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Program.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Program.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAG0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T08:26:38.286Z"
+              "WhenOpened": "2025-05-02T08:26:38.286Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T00:38:35.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{2bb8137c-bac8-4d04-820a-c52b5d5b82da}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SalesforceIntegration.cshtml",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Views\\Admin\\SalesforceIntegration.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\SalesforceIntegration.cshtml",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Views\\Admin\\SalesforceIntegration.cshtml",
+              "RelativeToolTip": "Views\\Admin\\SalesforceIntegration.cshtml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-13T00:38:09.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "20250430221301_m.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
               "RelativeDocumentMoniker": "Migrations\\20250430221301_m.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Migrations\\20250430221301_m.cs",
               "RelativeToolTip": "Migrations\\20250430221301_m.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -114,20 +215,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "SearchController.cs",
-              "DocumentMoniker": "E:\\for itransition\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
+              "DocumentMoniker": "E:\\Itransition integration\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
               "RelativeDocumentMoniker": "Features\\Search\\Controllers\\SearchController.cs",
-              "ToolTip": "E:\\for itransition\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
+              "ToolTip": "E:\\Itransition integration\\Itransition-final-project\\Features\\Search\\Controllers\\SearchController.cs",
               "RelativeToolTip": "Features\\Search\\Controllers\\SearchController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T22:02:05.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T22:02:05.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "20250427150343_verynew.cs",
               "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427150343_verynew.cs",
               "RelativeDocumentMoniker": "..\\..\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427150343_verynew.cs",
@@ -138,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "20250427151458_initial.cs",
               "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427151458_initial.cs",
               "RelativeDocumentMoniker": "..\\..\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427151458_initial.cs",
@@ -149,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "20250427162902_add-migration initial.cs",
               "DocumentMoniker": "E:\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427162902_add-migration initial.cs",
               "RelativeDocumentMoniker": "..\\..\\Itransition more 2\\7\\FormsApp\\Migrations\\20250427162902_add-migration initial.cs",
